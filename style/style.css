@@ -1,0 +1,16 @@
+/* reset */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+}
+
+.item{
+    background-color: antiquewhite;
+    height: 200px;
+    width: 200px;
+}
