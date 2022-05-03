@@ -26,21 +26,32 @@ for (let i = 1; i <= 100; i++) {
 // MILESTONE 2
 // Dato un container nel DOM, appendi un elemento html con il numero o la stringa corretta.
 
-// 1. Prendo il container dal DOM
-const container = document.querySelector(".container");
-// 2. Dentro al container inserisco dei item per ogni numero
-for (let i = 1; i <= 100; i++){
-    const item = document.createElement("div: class = item");
+// 1. Prendo un elemento nel container dal DOM
+const list = document.querySelector(".list");
+// 2. Dentro all'elemento inserisco dei item per ogni numero
+// MILESTONE 3
+// Applica uno stile differente a seconda del valore dell'indice per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di 3 che di 5.
+for (let i = 1; i <= 100; i++) {
+    const item = document.createElement("li");
+    item.classList.add("item");
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+        item.innerHTML = "FizzBuzz";
+        item.classList.add("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+        item.innerHTML = "Fizz";
+        item.classList.add("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+        item.innerHTML = "Buzz";
+        item.classList.add("Buzz");
+    } else {
+        console.log(i);
+        item.innerHTML = i;
+    }
 }
 
 
 
 
-// MILESTONE 3
-// Applica uno stile differente a seconda del valore dell'indice per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di 3 che di 5.
-
-// Prima di partire a scrivere codice poniamoci qualche domanda:
-// Come faccio a sapere se un numero è divisibile per un altro? Abbiamo visto qualcosa di particolare che possiamo usare? Come creare nuovi elementi html e appenderli al container?
-// Consigli del giorno:
-// 1. scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
-// 2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
